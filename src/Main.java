@@ -2,16 +2,19 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+         LinkedList list=new LinkedList();
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+         list.addFront(1);
+        list.addFront(2);
+        list.addFront(3);
+        list.addFront(4);
+        list.addFront(5);
+        list.displayAllElements();
+
+        list.addEnd(10);
+        list.addEnd(9);
+        list.displayAllElements();
+
     }
 }
