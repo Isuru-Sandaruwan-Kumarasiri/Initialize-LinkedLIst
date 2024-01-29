@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 public class LinkedList {
     Node head;
     Node tail;
@@ -27,6 +29,7 @@ public class LinkedList {
         }else{
             tail.next=newNode;
             tail=newNode;
+
         }
     }
 
