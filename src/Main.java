@@ -12,9 +12,24 @@ public class Main {
         list.addFront(5);
         list.displayAllElements();
 
+        System.out.println("=====Add Element Front========");
         list.addEnd(10);
         list.addEnd(9);
         list.displayAllElements();
+
+
+        System.out.println("=======Check Element========");
+        System.out.println(list.nodeExist(4));
+        //System.out.println(list.SearchNode(4));
+
+        System.out.println("=======Element add to target value========");
+        list.insertNextNode(5,100);
+        list.displayAllElements();
+
+
+
+
+
 
     }
 }

@@ -40,4 +40,41 @@ public class LinkedList {
             temp=temp.next;
         }
     }
+
+    public boolean nodeExist(int data) {
+        Node current = this.head;
+
+        while (current != null) {
+            if (current.data == data) {
+                return true;
+            }
+            current=current.next;
+        }
+
+        return false;
+    }
+    public Node SearchNode(int data) {
+        Node current = this.head;
+
+        while (current != null) {
+            if (current.data == data) {
+                return current;
+            }
+            current=current.next;
+        }
+
+        return null;
+    }
+    public void insertNextNode(int currentData,int newData){
+        Node currentNode;
+        if((currentNode=SearchNode(currentData))==null){
+            System.out.println("Previous Node Should not be NULL");
+        }else{
+            Node newNode=new Node(newData);
+            newNode.next=currentNode.next;
+            currentNode.next=newNode;
+
+        }
+    }
+
 }
