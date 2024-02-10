@@ -1,3 +1,7 @@
+
+
+//S/20/426
+
 public class LinkedList2 {
     private Node head;
     private Node tail;
@@ -89,17 +93,26 @@ public class LinkedList2 {
         return null;
     }
 
+    
 
     public void insertNext(int prev_data, int newData) {
-        Node prev_node;
-        if ((prev_node=search(prev_data) )== null){
-            System.out.println("The given previuos node ");
-            return ;
-        }
 
-        Node newNode = new Node(newData);
-        newNode.next = prev_node.next;
-        prev_node.next = newNode;
+            Node temp=this.head;
+            while(temp!=null){
+                if (temp.next.data==prev_data){
+                    Node newNode=new Node(newData);
+                    Node pre_Node=temp.next;
+                    newNode.next=pre_Node;
+                    temp.next=newNode;
+                    return;
+
+                }
+//
+                temp=temp.next;
+            }
+
+
+
     }
 
     public void deleteNode(int target_value){

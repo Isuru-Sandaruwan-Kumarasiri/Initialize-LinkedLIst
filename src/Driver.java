@@ -1,3 +1,7 @@
+
+
+
+//S/20/426
 public class Driver {
     public static void main(String[] args) {
         LinkedList2 list=new LinkedList2();
@@ -26,6 +30,8 @@ public class Driver {
         System.out.println("f)");
         list.deleteNode(70);
         list.displayNodes();
+
+
 
         System.out.println("g)");
         if(list.search(30)==null){
