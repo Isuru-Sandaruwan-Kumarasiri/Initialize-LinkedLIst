@@ -15,12 +15,13 @@ public class doublyLinkedList {
         }else {
             newNode.next=head;
             head.prev=newNode;
-            newNode=head;
+            head=newNode;
         }
     }
 
     public void traverseForward(){
         doublyLinkedListNode current=head;
+
         while(current!=null){
             System.out.print(current.data+",");
             current=current.next;
@@ -28,8 +29,9 @@ public class doublyLinkedList {
     }
     public void traverseBackward(){
         doublyLinkedListNode current=tail;
+
         while (current!=null){
-            System.out.println(current.data+",");
+            System.out.print(current.data+",");
             current=current.prev;
         }
     }
@@ -51,7 +53,7 @@ public class doublyLinkedList {
         } else {
             doublyLinkedListNode current = head;
             int currentPosition = 1;
-            while (current != null && currentPosition < position) {//current!=null array limit eka ikmawa position eka labadunnot ena error eka avoid karnn
+            while (current != null && currentPosition <=position) {//current!=null array limit eka ikmawa position eka labadunnot ena error eka avoid karnn
                 current = current.next; //current ekat watenne enyer karana postion node ekam ,example pos 3 -->node 3
                 currentPosition++;
             }
